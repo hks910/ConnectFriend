@@ -54,7 +54,9 @@ return [
     'profession' => 'Profession',
     'see_more' => 'See More',
     'avatar' => 'avatar',
-    'chat' => 'chat'
+    'chat' => 'chat',
+    'accept'=> 'accept',
+    'reject'=> 'reject',
 ];
 
 ?>
