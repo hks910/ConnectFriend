@@ -87,7 +87,7 @@
                     @foreach ($users as $user)
                         <a href="{{ route('messages.chat', ['current_chat_id' => $user->id]) }}"
                            class="list-group-item list-group-item-action d-flex align-items-center list-group-item-custom {{ $current_chat_id == $user->id ? 'active-chat' : '' }}">
-                            <img src="{{ $user->profile_picture ?: asset('assets/images/default-avatar.png') }}" alt="{{ $user->name }}'s avatar"
+                            <img src="{{ $user->profile_picture ?: asset('assets/images/default.jpg') }}" alt="{{ $user->name }}'s avatar"
                                  class="rounded-circle me-3" style="width: 40px; height: 40px; object-fit: cover;">
                             <span>{{ $user->name }}</span>
                         </a>

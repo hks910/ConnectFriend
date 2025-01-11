@@ -110,7 +110,7 @@
                             <div class="col-md-4">
                                 <div class="card mb-4 card-custom">
                                     <div class="card-body card-body-custom">
-                                        <img src="{{ asset('assets/images/default-avatar.png') }}" class="profile-img me-3" alt="User Avatar">
+                                        <img src="{{ asset('assets/images/default.jpg') }}" class="profile-img me-3" alt="User Avatar">
                                         <div class="flex-grow-1">
                                             <a href="{{ route('profile.detail', ['user_id'=>$user->id]) }}" class="text-decoration-none text-dark">{{ $user->name }}</a>
                                             <p class="card-text-muted mb-2">{{ Str::limit(implode(', ', json_decode($user->fields_of_work, true)), 20, '...') }}</p>
@@ -138,7 +138,7 @@
                             <div class="col-md-4">
                                 <div class="card mb-4 card-custom">
                                     <div class="card-body card-body-custom">
-                                        <img src="{{ $friend->profile_picture ?: asset('assets/images/default-avatar.png') }}" class="profile-img me-3" alt="User Avatar">
+                                        <img src="{{ $friend->profile_picture ?: asset('assets/images/default.jpg') }}" class="profile-img me-3" alt="User Avatar">
                                         <div class="flex-grow-1">
                                             <h5 class="card-title mb-1">{{ $friend->name }}</h5>
                                             <p class="card-text-muted mb-1">{{ Str::limit(implode(', ', json_decode($friend->fields_of_work, true)), 24, '...') }}</p>

@@ -52,7 +52,9 @@ return [
     'welcome_to_connect_friend' => 'Welcome to ConnectFriend',
     'find_friends_based_on_your_interests_and_profession' => 'Find friends based on your interests and profession',
     'profession' => 'Profession',
-    'see_more' => 'See More'
+    'see_more' => 'See More',
+    'avatar' => 'avatar',
+    'chat' => 'chat'
 ];
 
 ?>

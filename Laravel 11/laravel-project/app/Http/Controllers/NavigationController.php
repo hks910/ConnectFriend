@@ -60,12 +60,12 @@ class NavigationController extends Controller
             session()->flush();
         }
 
-        return view('authenthication.register');
+        return view('auth.register');
     }
 
     public function loginPage()
     {
-        return view('authenthication.login');
+        return view('auth.login');
     }
 
     public function topupPage()

@@ -75,7 +75,7 @@
     <div class="profile-header">
         <h1>{{ $user->name }}'s Profile</h1>
         <p class="text-muted">{{ $user->email }}</p>
-        <img src="{{ $user->profile_picture ?: asset('assets/images/default-avatar.png') }}" alt="Profile Picture" class="profile-img">
+        <img src="{{ $user->profile_picture ?: asset('assets/images/default.jpg') }}" alt="Profile Picture" class="profile-img">
     </div>
 
     <!-- Profile Details Section -->

@@ -83,7 +83,7 @@
                 <a href="{{ route('profile.detail', ['user_id' => $user->id]) }}" class="text-decoration-none">
                     <div class="card text-center">
                         <div class="card-img-top d-flex justify-content-center mt-4">
-                            <img src="{{ $user->profile_picture ?: asset('assets/images/default-avatar.png') }}" alt="User Photo" style="width: 150px; height: 150px;">
+                            <img src="{{ $user->profile_picture ?: asset('assets/images/default.jpg') }}" alt="User Photo" style="width: 150px; height: 150px;">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">{{ $user->name }}</h5>

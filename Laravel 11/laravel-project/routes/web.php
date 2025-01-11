@@ -17,7 +17,7 @@ Route::get('/profile/{user_id}/info', [NavigationController::class, 'detailPage'
 
 Route::middleware(['guest'])->group(function () {
     Route::get('/auth/login', [NavigationController::class, 'loginPage'])->name('auth.loginPage');
-    Route::post('/auth/login', [AuthenticationController::class, 'login'])->name('auth.login');
+    Route::post('/auth/login', [AuthenticationController::class, 'login'])->name('login');
     
     Route::get('/auth/register', [NavigationController::class, 'registerPage'])->name('auth.registerPage');
     Route::post('/auth/register', [AuthenticationController::class, 'register'])->name('auth.register');
@@ -39,7 +39,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/user/visibility/toggle', [UserController::class, 'changeVisibility'])->name('user.visibility.toggle');
     
     Route::get('/market/avatar', [NavigationController::class, 'avatarMarketPage'])->name('market.avatar');
-    Route::post('/market/avatar/purchase/{avatar_id}', [AvatarController::class, 'purchaseAvatar'])->name('market.avatar.purchase');
+    Route::post('/market/avatar/purchase/{avatar_id}', [AvatarController::class, 'buyAvatar'])->name('market.avatar.purchase');
     Route::post('/user/avatar/change', [UserController::class, 'changeAvatar'])->name('user.avatar.change');
     
     Route::get('/friends/requests', [NavigationController::class, 'friendRequestPage'])->name('friends.requests');

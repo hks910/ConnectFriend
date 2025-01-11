@@ -14,18 +14,25 @@ class AvatarSeeder extends Seeder
     public function run(): void
     {
         $name = [
-            'Cool Buddy Avatar',
-            'Keep Fighting Buddy',
-            'Itachi',
-            'Eagle Bird',
-            'Phantom Assassin'
+            'Shu',
+            'Niu',
+            'Hu',
+            'Tu',
+            'Long',
+            'She',
+            'Ma',
+            'Yang',
+            'Hou',
+            'Ji',
+            'Gou',
+            'Zhu'
         ];
 
         for ($i=1; $i <= 12; $i++) { 
             Avatar::create([
                 'name' => $name[$i - 1],
                 'price' => rand(50, 100000),
-                'path' => '/assets/images/avatar/'.$i.'.png'
+                'path' => '/assets/images/avatar/'.$i.'.jpg'
             ]);
         }
     }

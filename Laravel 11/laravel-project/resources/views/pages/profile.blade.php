@@ -5,7 +5,7 @@
         <div class="text-center mb-4">
             <h1>{{ Auth::user()->name }}'s Profile</h1>
             <p class="text-muted">{{ Auth::user()->email }}</p>
-            <img src="{{ Auth::user()->profile_picture ?: asset('assets/images/default-avatar.png') }}" alt="Profile Picture" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+            <img src="{{ Auth::user()->profile_picture ?: asset('assets/images/default.jpg') }}" alt="Profile Picture" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
         </div>
         <div class="row mb-4">
             <div class="col-md-6">
@@ -48,7 +48,7 @@
                         @csrf
                         <input type="hidden" name="avatar_path" value="">
                         <div class="card text-center pt-3 {{ Auth::user()->profile_picture === null ? 'border border-3 border-success shadow' : '' }}" style="cursor: pointer;" onclick="this.closest('form').submit();">
-                            <img src="{{ asset('assets/images/default-avatar.png') }}" alt="Avatar" class="card-img-top" style="height: 100px; object-fit: contain;">
+                            <img src="{{ asset('assets/images/default.jpg') }}" alt="Avatar" class="card-img-top" style="height: 100px; object-fit: contain;">
                             <div class="card-body">
                                 <p class="card-text">Default</p>
                             </div>

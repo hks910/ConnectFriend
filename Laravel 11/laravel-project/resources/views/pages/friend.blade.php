@@ -120,14 +120,14 @@
                         <div class="card user-card mb-4">
                             <form method="POST" action="{{ route('friends.add', ['receiver_id'=>$user->id]) }}" class="user-card-body">
                                 @csrf
-                                <img src="{{ $user->profile_picture ?: asset('assets/images/default-avatar.png') }}" class="user-img" alt="User Avatar">
+                                <img src="{{ $user->profile_picture ?: asset('assets/images/default.jpg') }}" class="user-img" alt="User Avatar">
                                 <div>
                                     <h5 class="user-name"><a href="{{ route('profile.detail', ['user_id'=>$user->id]) }}" class="text-decoration-none text-dark">{{ $user->name }}</a></h5>
                                     <p class="user-job">{{ Str::limit(implode(', ', json_decode($user->fields_of_work, true)), 20, '...') }}</p>
                                 </div>
                             </form>
                             <div class="user-card-footer">
-                                <form method="POST" action="{{ route('addFriend', ['friends.add'=>$user->id]) }}">
+                                <form method="POST" action="{{ route('friends.add', ['receiver_id'=>$user->id]) }}">
                                     @csrf
                                     <button type="submit" class="btn btn-primary btn-sm">👍 @lang('lang.add_friend')</button>
                                 </form>
